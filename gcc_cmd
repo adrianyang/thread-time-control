@@ -1,0 +1,12 @@
+g++ -Wall -g -fpic -pthread -ldl -o thread_test experiment.cpp experiment_test.cpp thread_test.cpp
+cp thread_test bin/
+
+cd interposition/
+make
+make install
+cd -
+
+cd helper/
+make
+make install
+cd -
